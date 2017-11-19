@@ -1,0 +1,467 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Layout.Master.cs" Inherits="Layout" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+    </title>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet">
+    <link href="Content/site.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 
+    <script src="<%# ResolveUrl("~/Scripts/jquery-1.12.2.min.js")%>" type="text/javascript"></script>
+ 
+    <script src="<%# ResolveUrl("~/Scripts/bootstrap.min.js")%>" type="text/javascript"></script>
+    <script src="<%# ResolveUrl("~/Scripts/site.js")%>" type="text/javascript"></script>
+    <link rel="shortcut icon" href='<%=Page.ResolveUrl("~/img/favicon.ico") %>' type="image/x-icon" />
+
+
+    <link rel="shortcut icon" href='<%=Page.ResolveUrl("~/img/favicon.ico") %>' type="image/x-icon" />
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href='<%=Page.ResolveUrl("~/css/open-sans.css") %>' />
+    <link rel="stylesheet" href='<%=Page.ResolveUrl("~/css/font-awesome.css") %>' />
+    <link rel="stylesheet" href='<%=Page.ResolveUrl("~/vendor/bootstrap/css/bootstrap.css") %>' />
+    <link rel="stylesheet" href='<%=Page.ResolveUrl("~/vendor/font-awesome/css/font-awesome.css") %>' />
+    <link rel="stylesheet" href='<%=Page.ResolveUrl("~/vendor/simple-line-icons/css/simple-line-icons.css") %>' />
+    <link rel="stylesheet" href='<%=Page.ResolveUrl("~/vendor/owl.carousel/assets/owl.carousel.min.css") %>' />
+    <link rel="stylesheet" href='<%=Page.ResolveUrl("~/vendor/owl.carousel/assets/owl.theme.default.min.css") %>' />
+    <link rel="stylesheet" href='<%=Page.ResolveUrl("~/vendor/magnific-popup/magnific-popup.css") %>' />
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href='<%=Page.ResolveUrl("~/css/theme.css") %>' />
+    <link rel="stylesheet" href='<%=Page.ResolveUrl("~/css/theme-elements.css") %>' />
+    <link rel="stylesheet" href='<%=Page.ResolveUrl("~/css/theme-blog.css") %>' />
+    <link rel="stylesheet" href='<%=Page.ResolveUrl("~/css/theme-shop.css") %>' />
+    <link rel="stylesheet" href='<%=Page.ResolveUrl("~/css/theme-animate.css") %>' />
+    <!-- Current Page CSS -->
+
+    <link rel="stylesheet" href='<%=Page.ResolveUrl("~/vendor/circle-flip-slideshow/css/component.css") %>' media="screen">
+    <%--<link rel="stylesheet" href='<%=Page.ResolveUrl("~/vendor/nivo-slider/nivo-slider.css") %>' media="screen">--%>
+    <link rel="stylesheet" href='<%=Page.ResolveUrl("~/vendor/nivo-slider/default/default.css") %>' media="screen">
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href='<%=Page.ResolveUrl("~/css/skins/skin-corporate-hosting.css") %>' />
+   <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href='<%=Page.ResolveUrl("~/css/custom.css") %>' />
+    
+  
+
+<%--<script src='<%=Page.ResolveUrl("~/vendor/modernizr/modernizr.js") %>'></script>--%>
+
+
+</head>
+
+<body>
+
+    <form id="form1" runat="server">
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <dx:ASPxPanel ID="TopPanel" runat="server" ClientInstanceName="TopPanel" Width="100%" Collapsible="true">
+                    <SettingsAdaptivity CollapseAtWindowInnerWidth="680" />
+                    <SettingsCollapsing>
+                        <ExpandButton GlyphType="Strips" />
+                    </SettingsCollapsing>
+                    <Styles>
+                        <ExpandBar CssClass="expandBar" />
+                        <ExpandedPanel CssClass="expandedPanel" />
+                    </Styles>
+                    <ExpandBarTemplate>
+                        <div class='title'>
+                                <a href="#">AUDITORIA SUPERIOR DEL ESTADO DE HIDALGO</a>
+                                <p class="small">Congreso del Estado de Hidalgo </p>
+                            </div>
+                            
+                            <div class='logo'>
+                            <a href="~/Default.aspx"><img src="../Content/Images/master/logo-aseh-color-WEB.png" width="250" ></a> 
+                            </div>
+                            
+                    </ExpandBarTemplate>
+
+                    <PanelCollection>
+                        <dx:PanelContent>
+                     
+                           <div class='title'>
+                                <a href="#">AUDITORIA SUPERIOR DEL ESTADO DE HIDALGO</a>
+                                <p class="small">Congreso del Estado de Hidalgo </p>
+                            </div>
+                           <div class='logo'>
+                               <a href="~/Default.aspx"><img src="../Content/Images/master/logo-aseh-color-WEB.png" width="250"></a> 
+                            </div>
+
+                            <%--<div class="titin">
+                              <h2 style:"color: #707b7c ;">Intranet</h2>
+                           </div>--%>
+                            <div class="panelContent">
+                                <div class="pull-right">
+                                    <div style="border-bottom:solid  #7b241c  4px;" >
+                                        
+                                  
+                                         </div>
+                                    
+                                    <nav class="panelItem">
+                                        <dx:ASPxMenu ID="NavMenu" runat="server" ClientInstanceName="NavMenu" EnableAnimation="true" CssClass="navMenu">
+                                            <ItemStyle Paddings-PaddingLeft="10" Paddings-PaddingRight="10" />
+                                            <Items>
+                                                <dx:MenuItem Text="INICIO" NavigateUrl="~/Default.aspx" />
+                                              
+                                                <dx:MenuItem Text="IDENTIDAD" NavigateUrl="~/#">
+                                                              <Items>
+                                                                     
+                                                                      <dx:MenuItem Text="Código de ética">
+                                                                      </dx:MenuItem>
+                                                                      <dx:MenuItem Text="Décalogo del servidor público" NavigateUrl="Decalogo.aspx">
+                                                                      </dx:MenuItem>
+                                                                      <dx:MenuItem Text="Organigrama" NavigateUrl="organigrama.aspx">
+                                                                      </dx:MenuItem>
+                                                                      <dx:MenuItem Text="Identidad visual o gráfica DOF">
+                                                                      </dx:MenuItem>
+                                                                    
+                                                                      </Items>
+                                                 </dx:MenuItem>
+
+                                                <dx:MenuItem Text="MARCO LEGAL" NavigateUrl="~/#" />
+                                                <dx:MenuItem Text="ENTIDADES FISCALIZADAS" NavigateUrl="~/#" >
+                                                    <Items>                                                  
+                                                                      <dx:MenuItem Text="Estatal">
+                                                                       
+                                                                      </dx:MenuItem>
+                                                                      <dx:MenuItem Text="Paraestatal">
+                                                                      </dx:MenuItem>
+                                                                      <dx:MenuItem Text="Municipal">
+                                                                      </dx:MenuItem>                                                              
+                                                    </Items>
+                                                    </dx:MenuItem>
+                                                <dx:MenuItem Text="INFORMES" NavigateUrl="Informes.aspx" />
+                                                <dx:MenuItem Text="DIFUSIÓN" NavigateUrl="~/#" >
+                                                    <Items>
+                                                                       <dx:MenuItem Text="Notas">
+                                                                      </dx:MenuItem>
+                                                                      <dx:MenuItem Text="Sintesís informativa">
+                                                                      </dx:MenuItem>
+                                                                      <dx:MenuItem Text="Gaceta informativa">
+                                                                      </dx:MenuItem>
+                                                                      <dx:MenuItem Text="Galería de imágenes">
+                                                                      </dx:MenuItem>
+                                                                      <dx:MenuItem Text="Día naranja">
+                                                                      </dx:MenuItem>
+                                                    </Items>
+                                                  </dx:MenuItem>
+                                                
+                                                <dx:MenuItem Text="DECLARACIÓN PATRIMONIAL" NavigateUrl="declaracion.aspx" />
+                                                <dx:MenuItem Text="SINTESÍS INFORMATIVA" NavigateUrl="~/#" />
+                                            </Items>
+                                        </dx:ASPxMenu>
+                                   
+                                    </nav>
+ 
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </dx:PanelContent>
+                    </PanelCollection>
+                </dx:ASPxPanel>       
+            </div>
+        </header>
+        <div class="content">
+            <asp:ContentPlaceHolder runat="server" ID="Content" />
+        </div>
+        <div id="btnBackToTop" class="btnBackToTop hidden">
+            <i class="glyphicon glyphicon-circle-arrow-up"></i>
+        </div>
+        <div class="row content">
+            <div class="areas col-md-10 col-xs-12 row">
+               
+                <div class="col-md-3 col-xs-6 area">
+                    <a href="da.aspx"><img src="../Content/Images/logos_area/da.jpg" alt="da" ></a>
+                </div>
+                <div class="col-md-3 col-xs-6 area">
+                    <a href="das.aspx"><img src="../Content/Images/logos_area/das.jpg" alt="das" ></a>
+                </div>
+                <div class="col-md-3 col-xs-6 area">
+                    <a href="dgae.aspx"><img src="../Content/Images/logos_area/dgae.jpg" alt="dgae" ></a>
+                </div>
+                <div class="col-md-3 col-xs-6 area">
+                    <a href="dgaj.aspx"><img src="../Content/Images/logos_area/dgaj.jpg" alt="dgaj" ></a>
+                </div>
+                <div class="col-md-3 col-xs-6 area">
+                   <a href="dgamop.aspx"><img src="../Content/Images/logos_area/dgamop.jpg" alt="dgamop" ></a>
+                </div>
+                <div class="col-md-3 col-xs-6 area">
+                    <a href="dgasd.aspx"><img src="../Content/Images/logos_area/dgasd.jpg" alt="dgasd" ></a>
+                </div>
+                <div class="col-md-3 col-xs-6 area">
+                    <a href="dgasp.aspx"><img src="../Content/Images/logos_area/dgasp.jpg" alt="dgasp" ></a>
+                </div>
+                <div class="col-md-3 col-xs-6 area">
+                    <a href="dmcp.aspx"><img src="../Content/Images/logos_area/dmcp.jpg" alt="dmcp" ></a>
+                </div>
+                <div class="col-md-3 col-xs-6 area">
+                    <a href="dti.aspx"><img src="../Content/Images/logos_area/dti.jpg" alt="dti" ></a>
+                </div>
+                <div class="col-md-3 col-xs-6 area">
+                    <a href="sp.aspx"><img src="../Content/Images/logos_area/sp.jpg" alt="sp" ></a>
+                </div>
+                <div class="col-md-3 col-xs-6 area">
+                    <a href="st.aspx"><img src="../Content/Images/logos_area/st.jpg" alt="st" ></a>
+                </div>
+                <div class="col-md-3 area">
+                    <a href="uvce.aspx"><img src="../Content/Images/logos_area/uvce.jpg" alt="uvce" ></a>
+                </div>
+            </div>
+
+           <div class="right-col col-md-2 col-xs-12" >
+               <div class="col-md-12 col-xs-4 area">
+                   <a href="~/#">
+                       <img src="../img/icons/PaseDeSalida.png" alt="pass">
+                       <h4 style="color:#808080">Pase de Salida</h4>
+                   </a>
+               </div>
+
+               <div class="col-md-12 col-xs-4 area">
+                   <a href="~/#">
+                       <img src="../img/icons/CV.png" alt="cv">
+                       <h4 style="color:#808080">Currículum Vitae</h4>
+                   </a>
+               </div>
+
+               <div class="col-md-12 col-xs-4 area border-bottom">
+                   <a href="~/#">
+                    <img src="../img/icons/micrositio.jpg" alt="micro" width="140" >
+                    <h4 style="color:#808080">Micrositio de capacitación</h4>
+                   </a>
+               </div>
+               <!--
+               <ul>
+                    <li><a class="active" href="~/#">Reciente</a></li>
+                    <li><a href="~/#"><img src="../img/icons/PaseDeSalida.png" alt="pass" width="140" ><h4 style="color:#808080">Pase de Salida</h4></a></li>
+                    <li><a href="~/#"><img src="../img/icons/CV.png" alt="cv" width="140"><h4 style="color:#808080">Currículum Vitae</h4></a></li>
+                    <li><a href="~/#"><img src="../img/icons/micrositio.jpg" alt="micro" width="140" ><h4 style="color:#808080">Micrositio de <br />capacitación</h4></a></li> 
+               </ul>
+               -->
+           </div>
+
+       </div>
+        
+
+        <div class="carrusel">
+                   <a href="#"> <img src="<%:Page.ResolveClientUrl("~/img/servicios/certamen.png")%>" width="170" alt="customer" ></a>
+                   <a href="#"> <img src="<%:Page.ResolveClientUrl("~/img/servicios/predd_index.jpg")%>" width="170" alt="customer" ></a>
+                   <a href="#"> <img src="<%:Page.ResolveClientUrl("~/img/servicios/formatos_transparencia.jpg")%>" width="170" alt="customer" ></a>
+                   <a href="#"> <img src="<%:Page.ResolveClientUrl("~/img/servicios/entrega_cp2013.jpg")%>" width="170" alt="customer" ></a>
+                   <a href="#"> <img src="<%:Page.ResolveClientUrl("~/img/servicios/apertura.jpg")%>" width="170" alt="customer" ></a>
+                   <a href="#"> <img src="<%:Page.ResolveClientUrl("~/img/servicios/acuerdo_entrega_recepcion.jpg")%>" width="170" alt="customer" ></a>
+        </div>
+
+  
+
+        <section>
+
+        <div class="row marginTop20">
+            <div class="servicios">              
+                <h3>Servicios Adicionales</h3>
+                <p>Los siguientes servicios pueden ser de ayuda </p>
+            </div>
+        </div>
+        <div class="row customers">
+            <div class="col-md-6">
+                <div class="media">
+                    <div class="media-left media-middle">      
+                        <div class="media-object">
+                            <img src="<%:Page.ResolveClientUrl("~/img/icons/sidep.png")%>" width="100" alt="customer" class="img-circle">
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">SIDEP</h4>
+                        <p><small>Sistema de Declaraciones Patrimoniales.</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <div class="media-object">
+                            <img src="<%:Page.ResolveClientUrl("~/img/icons/entidadesfisca.png")%>" width="100" alt="customer" class="img-circle">
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Entidades Fiscalización</h4>
+                        <p><small></small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row customers">
+            <div class="col-md-6">
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <div class="media-object">
+                            <img src="<%:Page.ResolveClientUrl("~/img/icons/galeria.png")%>" width="100" alt="customer" class="img-circle">
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Galería de imágenes</h4>
+                        <p><small>Sobre notas, eventos y capacitación.</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <div class="media-object">
+                            <img src="<%:Page.ResolveClientUrl("~/img/icons/herramientas.png")%>" width="100" alt="customer" class="img-circle">
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Herramientas</h4>
+                        <p><small>Herramientas para la firma electrónica, configuración de <br />bsigned, etc...</small></p>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-6">
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <div class="media-object">
+                            <img src="<%:Page.ResolveClientUrl("~/img/icons/email.png")%>" width="100" alt="customer" class="img-circle">
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Correo electrónico</h4>
+                        <p><small>Correo electrónico institucional (oficial)</small></p>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-6">
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <div class="media-object">
+                            <img src="<%:Page.ResolveClientUrl("~/img/icons/gacetai.png")%>" width="100" alt="customer" class="img-circle">
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Gaceta informativa</h4>
+                        <p><small>Síntesis de las principales actividades de la institución realizadas<br /> en el año.</small></p>
+                    </div>
+                </div>
+            </div>
+                         <div class="col-md-6">
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <div class="media-object">
+                            <img src="<%:Page.ResolveClientUrl("~/img/icons/publicaciones.png")%>" width="100" alt="customer" class="img-circle">
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Publicaciones</h4>
+                        <p><small>Guías, compendio, otras publicaciones de interés.</small></p>
+                    </div>
+                </div>
+            </div>
+                         <div class="col-md-6">
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <div class="media-object">
+                            <img src="<%:Page.ResolveClientUrl("~/img/icons/sintesis.png")%>" width="100" alt="customer" class="img-circle">
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Sintesis informativa</h4>
+                        <p><small>Las noticias más importantes en un mismo lugar.</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <%--   <section class="section section-no-background section-no-border mt-none mb-none" id="interesting-sites">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 center">
+                                <h2 class="heading-dark mb-none">Sitios de interés</h2>
+                                <p class="mb-xl">Consideramos que los siguientes sitios podrían servirte</p>
+                            </div>
+                        </div>
+
+                        <div class="row center mt-xl">
+                            <div class="owl-carousel owl-theme" data-plugin-options='{"items": 8, "autoplay": true, "autoplayTimeout": 3000}'>
+                                <div>
+                                    <a target="_blank" href="http://www.congreso-hidalgo.gob.mx/">
+                                        <img class="img-responsive" src='<%=Page.ResolveUrl("~/img/logos/p_legislativo.png") %>' alt=""></a>
+                                </div>
+                                <div>
+                                    <a target="_blank" href="http://www.hidalgo.gob.mx/">
+                                        <img class="img-responsive" src='<%=Page.ResolveUrl("~/img/logos/p_ejecutivo.png") %>' alt=""></a>
+                                </div>
+                                <div>
+                                    <a target="_blank" href="http://www.pjhidalgo.gob.mx/">
+                                        <img class="img-responsive" src='<%=Page.ResolveUrl("~/img/logos/p_judicial.png") %>' alt=""></a>
+                                </div>
+                                <div>
+                                    <a target="_blank" href="http://www.iaipgh.org.mx/">
+                                        <img class="img-responsive" src='<%=Page.ResolveUrl("~/img/logos/aipgh_logo.png") %>' alt=""></a>
+                                </div>
+                                <div>
+                                    <a target="_blank" href="#">
+                                        <img class="img-responsive" src='<%=Page.ResolveUrl("~/img/logos/uipg_logo.png") %>' alt=""></a>
+                                </div>
+                                <div>
+                                    <a target="_blank" href="http://www.asf.gob.mx/">
+                                        <img class="img-responsive" src='<%=Page.ResolveUrl("~/img/logos/asf_logo.png") %>' alt=""></a>
+                                </div>
+                                <div>
+                                    <a target="_blank" href="http://www.asofis.org.mx/">
+                                        <img class="img-responsive" src='<%=Page.ResolveUrl("~/img/logos/asofis_logo.png") %>' alt=""></a>
+                                </div>
+                                <div>
+                                    <a target="_blank" href="http://www.conac.gob.mx/">
+                                        <img class="img-responsive" src='<%=Page.ResolveUrl("~/img/logos/conac_logo.png") %>' alt=""></a>
+                                </div>
+
+                                <div>
+                                    <a target="_blank" href="http://inicio.ifai.org.mx/">
+                                        <img class="img-responsive" src='<%=Page.ResolveUrl("~/img/logos/logo-inai.png") %>' alt=""></a>
+                                </div>
+
+                                <div>
+                                    <a target="_blank" href="http://rendiciondecuentas.org.mx/">
+                                        <img class="img-responsive" src='<%=Page.ResolveUrl("~/img/logos/rrc_logo.png") %>' alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>--%>
+
+           <footer>
+            <div class="footerUp">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h4>Misión</h4>
+                            <p>Fiscalizar los recursos públicos con objetividad, imparcialidad, independencia y transparencia en apego a las disposiciones legales y normativas aplicables, con el propósito de impulsar una cultura de rendición de cuentas, dando confianza a la sociedad sobre la correcta aplicación de los mismos, reflejados en el cumplimiento de los planes y programas aprobados.</p>
+                        </div>
+                        <div class="col-md-offset-1 col-md-5">
+                            <h4>Visión</h4>
+                            <p>Consolidarse en una institución que fomente la cultura de rendición de cuentas claras y transparentes, dando certeza de que la fiscalización de los recursos públicos es en beneficio de la sociedad.</p>
+                        </div>
+                       
+                    </div>
+                </div> 
+               
+            </div>
+
+            <div class="footerDown">
+                <div class="container">
+                    <p><%:DateTime.Today.Year.ToString()%> &copy; Auditoría Superior del Estado de Hidalgo | <a href="http://www.congreso-hidalgo.gob.mx/" target="_blank">Congreso del Estado de Hidalgo</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <dx:ASPxGlobalEvents runat="server" ClientSideEvents-ControlsInitialized="adjustNavMenu" />
+    </form>
+</body>
+</html>

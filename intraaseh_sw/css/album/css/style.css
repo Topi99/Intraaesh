@@ -1,0 +1,103 @@
+﻿@charset "UTF-8";
+/*
+ * Bootstrap Image Gallery Demo CSS 3.0.0
+ * https://github.com/blueimp/Bootstrap-Image-Gallery
+ *
+ * Copyright 2013, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+
+
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 10px 0 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 2em;
+    color: #333;
+}
+
+
+.modal {
+    overflow: auto;
+    color: #333;
+}
+
+
+.thumbnail-images {
+    display: block;
+    padding: 5px;
+    margin:0px;
+    line-height: 1.428571429;
+    background-color: #333;
+    border: 0px solid #808080;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+    .thumbnail-images h3 {
+        color: #fff;
+        text-align: center;
+    }
+
+    .thumbnail-images > img, .thumbnail-images a > img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+a.thumbnail-images:hover, a.thumbnail-images:focus, a.thumbnail-images.active {
+    border-color: #428bca;
+}
+
+.thumbnail-images .caption {
+    padding: 9px;
+    color: #333;
+}
+
+.input-group-addon {
+    background-color: #c89c33;
+    border: none;
+    color: #fff;
+}
+
+.btn-search {
+    color: #fff !important;
+    outline: none;
+    background-color: #c89c33;
+    border: 0 none;
+}
+
+.grid {
+  
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
